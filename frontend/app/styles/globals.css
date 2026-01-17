@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-weight: 300;
+}
+
+.logo-text {
+  font-family: 'Micro 5', sans-serif;
+}
+
+.transitioning {
+  transition: all 0.5s ease-in-out;
+}
+
+.input-border {
+  @apply border border-grey-2 focus:border-dark rounded outline-none transitioning;
+}
+
+.main-btn {
+  @apply bg-main-dark text-light hover:bg-main uppercase font-medium rounded transitioning cursor-pointer
+}
