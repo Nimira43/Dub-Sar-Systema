@@ -35,9 +35,9 @@ import {
 
 const data = {
   user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg',
+    name: 'Bob ',
+    email: 'bob@example.com',
+    avatar: '/avatars/bob.jpg',
   },
   navMain: [
     {
@@ -161,7 +161,7 @@ export function AppSidebar({
             <SidebarMenuButton asChild className='data-[slot=sidebar-menu-button]:!p-1.5'>
               <a href='#'>
                 <ArrowUpCircleIcon className='h-5 w-5' />
-                <span className='text-base font-semibold'>Acme Inc.</span>
+                <span className='text-3xl text-support logo-text'>Dub Sar Systema</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -176,5 +176,5 @@ export function AppSidebar({
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
-  );
+  )
 }

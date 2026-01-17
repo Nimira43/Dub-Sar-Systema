@@ -104,7 +104,6 @@ export const schema = z.object({
   reviewer: z.string(),
 })
 
-// Create a separate component for the drag handle
 function DragHandle({
   id
 }) {
@@ -256,9 +255,9 @@ const columns = [
               <SelectValue placeholder='Assign reviewer' />
             </SelectTrigger>
             <SelectContent align='end'>
-              <SelectItem value='Eddie Lake'>Eddie Lake</SelectItem>
-              <SelectItem value='Jamik Tashpulatov'>
-                Jamik Tashpulatov
+              <SelectItem value='Bob Jones'>Bob Jones</SelectItem>
+              <SelectItem value='Alice Smith'>
+                Alice Smith
               </SelectItem>
             </SelectContent>
           </Select>
@@ -733,9 +732,9 @@ function TableCellViewer({
                   <SelectValue placeholder='Select a reviewer' />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value='Eddie Lake'>Eddie Lake</SelectItem>
-                  <SelectItem value='Jamik Tashpulatov'>
-                    Jamik Tashpulatov
+                  <SelectItem value='Bob Jones'>Bob Jones</SelectItem>
+                  <SelectItem value='Alice Smith'>
+                    Alice Smith
                   </SelectItem>
                   <SelectItem value='Emily Whalen'>Emily Whalen</SelectItem>
                 </SelectContent>
