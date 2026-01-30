@@ -1,5 +1,6 @@
 import { Poppins } from 'next/font/google'
-import './styles/globals.css'
+import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -8,15 +9,22 @@ const poppins = Poppins({
 
 export const metadata = {
   title: 'Dub Sar Systema',
-  description: 'ERP web application using Next JS and Strapi'
+  description: 'ERP web application using Next JS, Strapi, Tailwind and Shadcn',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={poppins.className}>
-        {children}
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
