@@ -9,13 +9,13 @@ function Table({
   ...props
 }) {
   return (
-    <div data-slot='table-container' className='relative w-full overflow-x-auto'>
+    <div data-slot="table-container" className="relative w-full overflow-x-auto">
       <table
-        data-slot='table'
-        className={cn('w-full caption-bottom text-sm', className)}
+        data-slot="table"
+        className={cn("w-full caption-bottom text-sm", className)}
         {...props} />
     </div>
-  )
+  );
 }
 
 function TableHeader({
@@ -24,10 +24,10 @@ function TableHeader({
 }) {
   return (
     <thead
-      data-slot='table-header'
-      className={cn('[&_tr]:border-b', className)}
+      data-slot="table-header"
+      className={cn("[&_tr]:border-b", className)}
       {...props} />
-  )
+  );
 }
 
 function TableBody({
@@ -36,10 +36,10 @@ function TableBody({
 }) {
   return (
     <tbody
-      data-slot='table-body'
-      className={cn('[&_tr:last-child]:border-0', className)}
+      data-slot="table-body"
+      className={cn("[&_tr:last-child]:border-0", className)}
       {...props} />
-  )
+  );
 }
 
 function TableFooter({
@@ -48,10 +48,10 @@ function TableFooter({
 }) {
   return (
     <tfoot
-      data-slot='table-footer'
-      className={cn('bg-muted/50 border-t font-medium [&>tr]:last:border-b-0', className)}
+      data-slot="table-footer"
+      className={cn("bg-muted/50 border-t font-medium [&>tr]:last:border-b-0", className)}
       {...props} />
-  )
+  );
 }
 
 function TableRow({
@@ -60,13 +60,13 @@ function TableRow({
 }) {
   return (
     <tr
-      data-slot='table-row'
+      data-slot="table-row"
       className={cn(
-        'hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors',
+        "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
         className
       )}
       {...props} />
-  )
+  );
 }
 
 function TableHead({
@@ -75,13 +75,13 @@ function TableHead({
 }) {
   return (
     <th
-      data-slot='table-head'
+      data-slot="table-head"
       className={cn(
-        'text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 *:[[role=checkbox]]:translate-y-0.5',
+        "text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className
       )}
       {...props} />
-  )
+  );
 }
 
 function TableCell({
@@ -90,13 +90,13 @@ function TableCell({
 }) {
   return (
     <td
-      data-slot='table-cell'
+      data-slot="table-cell"
       className={cn(
-        'p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 *:[[role=checkbox]]:translate-y-0.5',
+        "p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className
       )}
       {...props} />
-  )
+  );
 }
 
 function TableCaption({
@@ -105,10 +105,10 @@ function TableCaption({
 }) {
   return (
     <caption
-      data-slot='table-caption'
-      className={cn('text-muted-foreground mt-4 text-sm', className)}
+      data-slot="table-caption"
+      className={cn("text-muted-foreground mt-4 text-sm", className)}
       {...props} />
-  )
+  );
 }
 
 export {

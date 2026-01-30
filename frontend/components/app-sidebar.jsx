@@ -35,7 +35,7 @@ import {
 
 const data = {
   user: {
-    name: 'lenny',
+    name: 'shadcn',
     email: 'm@example.com',
     avatar: '/avatars/shadcn.jpg',
   },
@@ -158,10 +158,10 @@ export function AppSidebar({
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className='data-[slot=sidebar-menu-button]:p-1.5!'>
-              <a href='#'>
-                <IconInnerShadowTop className='size-5!' />
-                <span className='text-base font-medium'>Dub Sar Systema</span>
+            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
+              <a href="#">
+                <IconInnerShadowTop className="!size-5" />
+                <span className="text-base font-semibold">Dub Sar Systema</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -170,11 +170,11 @@ export function AppSidebar({
       <SidebarContent>
         <NavMain items={data.navMain} />
         <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className='mt-auto' />
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }

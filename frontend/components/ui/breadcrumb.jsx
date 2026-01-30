@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 function Breadcrumb({
   ...props
 }) {
-  return <nav aria-label='breadcrumb' data-slot='breadcrumb' {...props} />
+  return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />;
 }
 
 function BreadcrumbList({
@@ -16,13 +16,13 @@ function BreadcrumbList({
 }) {
   return (
     <ol
-      data-slot='breadcrumb-list'
+      data-slot="breadcrumb-list"
       className={cn(
-        'text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm wrap-break-word sm:gap-2.5',
+        "text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5",
         className
       )}
       {...props} />
-  )
+  );
 }
 
 function BreadcrumbItem({
@@ -31,10 +31,10 @@ function BreadcrumbItem({
 }) {
   return (
     <li
-      data-slot='breadcrumb-item'
-      className={cn('inline-flex items-center gap-1.5', className)}
+      data-slot="breadcrumb-item"
+      className={cn("inline-flex items-center gap-1.5", className)}
       {...props} />
-  )
+  );
 }
 
 function BreadcrumbLink({
@@ -42,14 +42,14 @@ function BreadcrumbLink({
   className,
   ...props
 }) {
-  const Comp = asChild ? Slot : 'a'
+  const Comp = asChild ? Slot : "a"
 
   return (
     <Comp
-      data-slot='breadcrumb-link'
-      className={cn('hover:text-foreground transition-colors', className)}
+      data-slot="breadcrumb-link"
+      className={cn("hover:text-foreground transition-colors", className)}
       {...props} />
-  )
+  );
 }
 
 function BreadcrumbPage({
@@ -58,13 +58,13 @@ function BreadcrumbPage({
 }) {
   return (
     <span
-      data-slot='breadcrumb-page'
-      role='link'
-      aria-disabled='true'
-      aria-current='page'
-      className={cn('text-foreground font-normal', className)}
+      data-slot="breadcrumb-page"
+      role="link"
+      aria-disabled="true"
+      aria-current="page"
+      className={cn("text-foreground font-normal", className)}
       {...props} />
-  )
+  );
 }
 
 function BreadcrumbSeparator({
@@ -74,14 +74,14 @@ function BreadcrumbSeparator({
 }) {
   return (
     <li
-      data-slot='breadcrumb-separator'
-      role='presentation'
-      aria-hidden='true'
-      className={cn('[&>svg]:size-3.5', className)}
+      data-slot="breadcrumb-separator"
+      role="presentation"
+      aria-hidden="true"
+      className={cn("[&>svg]:size-3.5", className)}
       {...props}>
       {children ?? <ChevronRight />}
     </li>
-  )
+  );
 }
 
 function BreadcrumbEllipsis({
@@ -90,15 +90,15 @@ function BreadcrumbEllipsis({
 }) {
   return (
     <span
-      data-slot='breadcrumb-ellipsis'
-      role='presentation'
-      aria-hidden='true'
-      className={cn('flex size-9 items-center justify-center', className)}
+      data-slot="breadcrumb-ellipsis"
+      role="presentation"
+      aria-hidden="true"
+      className={cn("flex size-9 items-center justify-center", className)}
       {...props}>
-      <MoreHorizontal className='size-4' />
-      <span className='sr-only'>More</span>
+      <MoreHorizontal className="size-4" />
+      <span className="sr-only">More</span>
     </span>
-  )
+  );
 }
 
 export {
