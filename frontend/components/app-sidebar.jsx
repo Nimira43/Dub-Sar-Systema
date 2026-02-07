@@ -1,22 +1,12 @@
 'use client'
 
 import * as React from 'react'
+import { GiAbstract004 } from 'react-icons/gi'
+import { MdCalendarMonth, MdInventory, MdLayers, MdOutlineDashboard, MdOutlineSettings, MdToday, MdTrendingUp, MdViewWeek } from 'react-icons/md'
 import {
   IconCamera,
-  IconChartBar,
-  IconDashboard,
-  IconDatabase,
   IconFileAi,
   IconFileDescription,
-  IconFileWord,
-  IconFolder,
-  IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
-  IconSearch,
-  IconSettings,
-  IconUsers,
 } from '@tabler/icons-react'
 
 import { NavDocuments } from '@/components/nav-documents'
@@ -35,36 +25,31 @@ import {
 
 const data = {
   user: {
-    name: 'shadcn',
-    email: 'm@example.com',
+    name: 'admin',
+    email: 'admin@dubsar.com',
     avatar: '/avatars/shadcn.jpg',
   },
   navMain: [
     {
       title: 'Dashboard',
-      url: '#',
-      icon: IconDashboard,
+      url: '/dashboard',
+      icon: MdOutlineDashboard,
     },
     {
-      title: 'Lifecycle',
-      url: '#',
-      icon: IconListDetails,
+      title: 'Categories',
+      url: '/dashboard/categories',
+      icon: MdLayers,
     },
     {
-      title: 'Analytics',
-      url: '#',
-      icon: IconChartBar,
+      title: 'Products',
+      url: '/dashboard/products',
+      icon: MdInventory,
     },
     {
-      title: 'Projects',
-      url: '#',
-      icon: IconFolder,
-    },
-    {
-      title: 'Team',
-      url: '#',
-      icon: IconUsers,
-    },
+      title: 'Sales',
+      url: '/dashboard/sales',
+      icon: MdTrendingUp,
+    }
   ],
   navClouds: [
     {
@@ -117,35 +102,25 @@ const data = {
   navSecondary: [
     {
       title: 'Settings',
-      url: '#',
-      icon: IconSettings,
-    },
-    {
-      title: 'Get Help',
-      url: '#',
-      icon: IconHelp,
-    },
-    {
-      title: 'Search',
-      url: '#',
-      icon: IconSearch,
-    },
+      url: '/dashboard/settings',
+      icon: MdOutlineSettings,
+    }
   ],
   documents: [
     {
-      name: 'Data Library',
-      url: '#',
-      icon: IconDatabase,
+      name: 'Today\'s Sales',
+      url: '/dashboard/reports/todayssales',
+      icon: MdToday,
     },
     {
-      name: 'Reports',
-      url: '#',
-      icon: IconReport,
+      name: 'Weekly Sales',
+      url: '/dashboard/reports/weeklysales',
+      icon: MdViewWeek,
     },
     {
-      name: 'Word Assistant',
-      url: '#',
-      icon: IconFileWord,
+      name: 'Montly Sales',
+      url: '/dashboard/reports/monthlysales',
+      icon: MdCalendarMonth,
     },
   ],
 }
@@ -158,10 +133,10 @@ export function AppSidebar({
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
-              <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Dub Sar Systema</span>
+            <SidebarMenuButton asChild className='data-[slot=sidebar-menu-button]:p-1.5!'>
+              <a href='#'>
+                <GiAbstract004 className='size-5! text-primary' />
+                <span className='text-base font-semibold pt-1'>Dub Sar Systema</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
